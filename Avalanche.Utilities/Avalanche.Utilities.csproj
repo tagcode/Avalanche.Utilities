@@ -7,7 +7,7 @@
     <Company>Avalanche Information Technology Oy</Company>
     <Copyright>Toni Kalajainen</Copyright>
     <RootNamespace>Avalanche.Utilities</RootNamespace>
-    <Version>0.1.1</Version>
+    <Version>0.1.2</Version>
     <ImplicitUsings>enable</ImplicitUsings>
     <Title>Avalanche.Utilities</Title>
     <Description>Comparers, cloners, providers, reflection, record management, stream, string, tasks, collections.</Description>
