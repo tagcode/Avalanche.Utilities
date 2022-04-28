@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <Authors>Toni Kalajainen</Authors>
+    <Company>Avalanche Information Technology Oy</Company>
+    <Copyright>Toni Kalajainen</Copyright>
+    <PackageProjectUrl>https://avalanche.fi/Avalanche.Core/</PackageProjectUrl>
+    <RootNamespace>Avalanche.Utilities</RootNamespace>
+    <Version>0.1.1</Version>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Title>Avalanche.Utilities.Abstractions</Title>
+    <Description>Comparers, cloners, providers, reflection, record management, stream, string, tasks, collections.</Description>
+    <RepositoryUrl>https://github.com/tagcode/Avalanche.Utilities/Avalanche.Utilities.Abstractions</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <IncludeSymbols>true</IncludeSymbols>
+    <PackageProjectUrl>https://avalanche.fi/Avalanche.Core/Avalanche.Service/docs/index.html</PackageProjectUrl>
+    <PackageIcon>..\icon.png</PackageIcon>
+    <PackageTags>collections provider string tasks reflection record dispose comparer equalitycomparer cloner readonly avalanche</PackageTags>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseFile>..\LICENSE.txt</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <NoWarn>CS1591;CS1573</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreAdditionalProjectSources>https://avalanche.fi/Avalanche.Core/nupkg/index.json</RestoreAdditionalProjectSources>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\.licenseheader" Link=".licenseheader" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="README.md">
+      <DependentUpon>README.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </None>
+  </ItemGroup>
+</Project>

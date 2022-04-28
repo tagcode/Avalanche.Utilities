@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <Authors>Toni Kalajainen</Authors>
+    <Company>Avalanche Information Technology Oy</Company>
+    <Copyright>Toni Kalajainen</Copyright>
+    <RootNamespace>Avalanche.Utilities</RootNamespace>
+    <Version>0.1.1</Version>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Title>Avalanche.Utilities</Title>
+    <Description>Comparers, cloners, providers, reflection, record management, stream, string, tasks, collections.</Description>
+    <RepositoryUrl>https://github.com/tagcode/Avalanche.Utilities</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <IncludeSymbols>true</IncludeSymbols>
+    <PackageProjectUrl>https://avalanche.fi/Avalanche.Core/Avalanche.Service/docs/index.html</PackageProjectUrl>
+    <PackageTags>collections provider string tasks reflection record dispose comparer equalitycomparer cloner readonly avalanche</PackageTags>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageIcon>..\icon.png</PackageIcon>
+    <PackageLicenseFile>$(ProjectPath)\..\LICENSE.txt</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <NoWarn>CS1591;CS1573</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\.licenseheader" Link=".licenseheader" />
+    <None Include="..\LICENSE.txt" Link="LICENSE.txt" />
+  </ItemGroup>
+  <PropertyGroup>
+    <RestoreAdditionalProjectSources>https://avalanche.fi/Avalanche.Core/nupkg/index.json</RestoreAdditionalProjectSources>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Avalanche.Utilities.Abstractions\Avalanche.Utilities.Abstractions.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Collections\StructList.cs">
+      <DependentUpon>StructList.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Collections\Tuples.cs">
+      <DependentUpon>Tuples.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Collections\StructList.tt">
+      <LastGenOutput>StructList.cs</LastGenOutput>
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Update="Collections\Tuples.tt">
+      <LastGenOutput>Tuples.cs</LastGenOutput>
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Update="README.md">
+      <DependentUpon>README.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+</Project>
