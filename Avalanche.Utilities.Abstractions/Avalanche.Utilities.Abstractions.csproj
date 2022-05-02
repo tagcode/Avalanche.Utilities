@@ -8,7 +8,7 @@
     <Copyright>Toni Kalajainen</Copyright>
     <PackageProjectUrl>https://avalanche.fi/Avalanche.Core/</PackageProjectUrl>
     <RootNamespace>Avalanche.Utilities</RootNamespace>
-    <Version>0.1.2</Version>
+    <Version>0.1.3</Version>
     <ImplicitUsings>enable</ImplicitUsings>
     <Title>Avalanche.Utilities.Abstractions</Title>
     <Description>Comparers, cloners, providers, reflection, record management, stream, string, tasks, collections.</Description>
