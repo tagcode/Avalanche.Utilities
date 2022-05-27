@@ -90,8 +90,10 @@ public readonly struct MarkedText : IEquatable<MarkedText>
     public bool HasPosition => Position.HasValue;
     /// <summary></summary>
     public MarkedText Slice(int index, int length) => new MarkedText(Text, Position.Slice(index, length));
-    /// <summary>Return origin string of <see cref="Text"/> string or create new string</summary>
-    public string AsString => MemoryMarshal.TryGetString(Text, out string? text, out int start, out int length) && text != null & start == 0 && length == Text.Length ? text! : new string(Text.Span);
+    /// <summary>Return original string of <see cref="Text"/> string or create new string</summary>
+    public string AsString => Text.IsEmpty ? "" : MemoryMarshal.TryGetString(Text, out string? text, out int start, out int length) && text != null & start == 0 && length == Text.Length ? text! : new string(Text.Span);
+    /// <summary>Return original string or null</summary>
+    public string? AsPossibleString => Text.IsEmpty ? null : MemoryMarshal.TryGetString(Text, out string? text, out int start, out int length) && text != null & start == 0 && length == Text.Length ? text! : new string(Text.Span);
 
     /// <summary></summary>
     public override bool Equals([NotNullWhen(true)] object? obj) 

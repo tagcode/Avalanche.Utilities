@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+    <TargetFrameworks>net6.0</TargetFrameworks>
     <Nullable>enable</Nullable>
     <Authors>Toni Kalajainen</Authors>
     <Company>Avalanche Information Technology Oy</Company>
@@ -27,14 +27,13 @@
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="..\.licenseheader" Link=".licenseheader" />
     <None Include="..\LICENSE.txt" Link="LICENSE.txt" />
   </ItemGroup>
   <PropertyGroup>
     <RestoreAdditionalProjectSources>https://avalanche.fi/Avalanche.Core/nupkg/index.json</RestoreAdditionalProjectSources>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Avalanche.Utilities.Abstractions\Avalanche.Utilities.Abstractions.csproj" />
+    <ProjectReference Include="..\Avalanche.Utilities.Abstractions\Avalanche.Utilities.Abstractions.csproj" Version="0.1.3" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Collections\StructList.cs">
